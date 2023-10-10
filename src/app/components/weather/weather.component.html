@@ -1,0 +1,18 @@
+<div class="weather-container">
+  <h1>Consulta el Tiempo</h1>
+  <form [formGroup]="weatherForm" (ngSubmit)="getCoordinatesByCity()">
+    <input type="text" placeholder="Ciudad" formControlName="cityName">
+    <button type="submit">Consultar</button>
+  </form>
+  <div *ngFor="let weather of weatherList" class="weather-card">
+    <app-weather-card
+      [cityName]="weather.cityName"
+      [temperature]="weather.main.temp"
+      [weatherDescription]="weather.weather[0].description"
+      [humidity]="weather.main.humidity"
+      [windSpeed]="weather.wind.speed"
+      [weatherIconUrl]="weather.weatherIconUrl"
+      (click)="goToDetail(weather.id)"
+    ></app-weather-card>
+  </div>
+</div>

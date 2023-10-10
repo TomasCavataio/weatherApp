@@ -1,0 +1,12 @@
+<div class="weather-card">
+  <div class="weather-card-header">
+    <h3>{{ cityName }}</h3>
+    <img [src]="weatherIconUrl" alt="Weather Icon" />
+  </div>
+  <div class="weather-card-body">
+    <p>Temperatura: {{ temperature }}°C</p>
+    <p>Estado del cielo: {{ weatherDescription }}</p>
+    <p>Humedad: {{ humidity }}%</p>
+    <p>Viento: {{ windSpeed }} m/s</p>
+  </div>
+</div>
