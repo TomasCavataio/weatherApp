@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-weather',
   templateUrl: './weather.component.html',
-  styleUrls: ['./weather.component.css'],
+  styleUrls: ['./weather.component.scss'],
 })
 export class WeatherComponent {
   weatherList: Array<any> = [];
@@ -26,14 +26,14 @@ export class WeatherComponent {
     this.weatherService
       .getCoordinatesByCity(cityName)
       .subscribe((weatherData) => {
-        this.getWeather(weatherData[0].lat, weatherData[0].lon);
+        this.getWeather(weatherData[0].lat, weatherData[0].lon, weatherData[0].name);
       });
   }
 
-  getWeather(lat: number, lon: number) {
+  getWeather(lat: number, lon: number, name: string) {
     this.weatherService.getWeatherData(lat, lon).subscribe((data) => {
       if (!this.cityDataExists(data.id)) {
-        this.weatherList.push(data);
+        this.weatherList.push({ ...data, cityName: name });
       }
     });
   }

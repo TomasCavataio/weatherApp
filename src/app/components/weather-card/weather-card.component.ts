@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-weather-card',
   templateUrl: './weather-card.component.html',
-  styleUrls: ['./weather-card.component.css'],
+  styleUrls: ['./weather-card.component.scss'],
 })
 export class WeatherCardComponent {
   @Input() cityName: string | undefined;
@@ -11,5 +11,5 @@ export class WeatherCardComponent {
   @Input() weatherDescription: string | undefined;
   @Input() humidity: number | undefined;
   @Input() windSpeed: number | undefined;
-  @Input() weatherIconUrl: string | undefined;
+  @Input() weatherIconUrl: string | undefined = 'src/assets/sun.jpg';
 }
