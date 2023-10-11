@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { WeatherService } from '../../services/weather.service';
 import { Router } from '@angular/router';
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './weather.component.html',
   styleUrls: ['./weather.component.scss'],
 })
-export class WeatherComponent {
+export class WeatherComponent implements OnInit {
   weatherList: Array<any> = [];
   weatherForm: FormGroup;
 
@@ -21,25 +21,65 @@ export class WeatherComponent {
     });
   }
 
+  ngOnInit() {
+    if ('geolocation' in navigator) {
+      // Get the user's location
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+          this.getWeather(latitude, longitude);
+        },
+        (error) => {
+          console.error('Error getting location:', error);
+        }
+      );
+    }
+  }
+
   getCoordinatesByCity() {
     const cityName = this.weatherForm.get('cityName')?.value;
     this.weatherService
       .getCoordinatesByCity(cityName)
       .subscribe((weatherData) => {
-        this.getWeather(weatherData[0].lat, weatherData[0].lon, weatherData[0].name);
+        this.getWeather(
+          weatherData[0].lat,
+          weatherData[0].lon,
+          weatherData[0].name,
+          weatherData[0].state
+        );
       });
   }
 
-  getWeather(lat: number, lon: number, name: string) {
+  getWeather(lat: number, lon: number, name?: string, state?: string) {
     this.weatherService.getWeatherData(lat, lon).subscribe((data) => {
       if (!this.cityDataExists(data.id)) {
-        this.weatherList.push({ ...data, cityName: name });
+        this.weatherList.push({
+          ...data,
+          cityName: name,
+          state: state,
+          main: {
+            ...data.main,
+            temp: Math.round(data.main.temp),
+          },
+        });
       }
     });
   }
 
   goToDetail(id: number) {
     this.router.navigate(['/detail', id]);
+  }
+
+  deleteWeatherList() {
+    this.weatherList = [];
+  }
+
+  removeCard(cityName: string) {
+    this.weatherList = this.weatherList.filter(
+      (card) => card.cityName !== cityName
+    );
   }
 
   private cityDataExists(id: number): boolean {
