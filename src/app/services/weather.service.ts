@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class WeatherService {
   private apiKey = '6946f14c1bde2e88258fdd8ba905ca3d';
   private apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
-  private coordinatesUrl = 'http://api.openweathermap.org/geo/1.0/direct';
+  private coordinatesUrl = 'https://api.openweathermap.org/geo/1.0/direct';
   constructor(private http: HttpClient) {}
 
   getCoordinatesByCity(cityName: string): Observable<any> {
