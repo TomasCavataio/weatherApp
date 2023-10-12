@@ -12,10 +12,7 @@ export class WeatherComponent implements OnInit {
   weatherList: Array<any> = [];
   weatherForm: FormGroup;
 
-  constructor(
-    private readonly weatherService: WeatherService,
-    private readonly router: Router
-  ) {
+  constructor(private readonly weatherService: WeatherService) {
     this.weatherForm = new FormGroup({
       cityName: new FormControl(''),
     });
@@ -23,7 +20,6 @@ export class WeatherComponent implements OnInit {
 
   ngOnInit() {
     if ('geolocation' in navigator) {
-      // Get the user's location
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const latitude = position.coords.latitude;
@@ -68,17 +64,13 @@ export class WeatherComponent implements OnInit {
     });
   }
 
-  goToDetail(id: number) {
-    this.router.navigate(['/detail', id]);
-  }
-
-  deleteWeatherList() {
+  removeWeatherList() {
     this.weatherList = [];
   }
 
-  removeCard(cityName: string) {
+  removeCard(id: number) {
     this.weatherList = this.weatherList.filter(
-      (card) => card.cityName !== cityName
+      (card) => card.id !== id
     );
   }
 

@@ -1,10 +1,10 @@
 <div class="weather-card">
   <i (click)="removeWeather()" class="fa fa-times close-icon"></i>
   <div class="weather-card-header">
-    <h2>{{ temperature }}°C</h2>
     <i [ngClass]="getWeatherIcon()"></i>
+    <h2>{{ temperature }}°C</h2>
   </div>
-  <div class="weather-card-body">
+  <div class="weather-card-body" (click)="goToDetail()">
     <h3>{{ cityName }}</h3>
     <p>Estado del cielo: {{ weatherDescription }}</p>
     <p>Humedad: {{ humidity }}%</p>

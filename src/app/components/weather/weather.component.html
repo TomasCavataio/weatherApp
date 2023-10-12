@@ -3,11 +3,12 @@
   <form [formGroup]="weatherForm" (ngSubmit)="getCoordinatesByCity()">
     <input type="text" placeholder="Ciudad" formControlName="cityName" />
     <button type="submit">Consultar</button>
-    <button type="button" (click)="deleteWeatherList()" >Eliminar</button>
+    <button type="button" (click)="removeWeatherList()" >Eliminar</button>
   </form>
   <section class="weather-card-container">
-    <div *ngFor="let weather of weatherList" class="weather-card">
+    <div *ngFor="let weather of weatherList" class="weather-card" >
       <app-weather-card
+        [id]="weather.id"
         [cityName]="weather.cityName ? weather.cityName : weather.name "
         [temperature]="weather.main.temp"
         [weatherDescription]="weather.weather[0].description"
@@ -15,7 +16,6 @@
         [windSpeed]="weather.wind.speed"
         [weatherIconUrl]="weather.weatherIconUrl"
         [state]="weather.state"
-        (click)="goToDetail(weather.id)"
         (removeCard)="removeCard($event)"
       ></app-weather-card>
     </div>
