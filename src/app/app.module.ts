@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { WeatherComponent } from './components/weather/weather.component';
-import { CityListComponent } from './components/city-list/city-list.component';
-import { WeatherCardComponent } from './components/weather-card/weather-card.component';
-import { CityDetailComponent } from './components/city-detail/city-detail.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { WeatherService } from './services/weather.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { StoreModule } from '@ngrx/store';
 import { environment } from 'src/environments/environment';
-
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { CityDetailComponent } from './components/city-detail/city-detail.component';
+import { CityListComponent } from './components/city-list/city-list.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { WeatherCardComponent } from './components/weather-card/weather-card.component';
+import { WeatherComponent } from './components/weather/weather.component';
+import { WeatherService } from './services/weather.service';
+import { weatherReducer } from './store/reducer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { environment } from 'src/environments/environment';
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
+    StoreModule.forRoot({ weatherList: weatherReducer }),
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent],

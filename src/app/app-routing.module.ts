@@ -5,7 +5,7 @@ import { CityDetailComponent } from './components/city-detail/city-detail.compon
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
-  { path: '', component: WeatherComponent },
+  { path: '/', component: WeatherComponent },
   { path: 'detail/:id', component: CityDetailComponent }, 
 ];
 

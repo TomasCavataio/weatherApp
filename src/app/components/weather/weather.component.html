@@ -4,6 +4,9 @@
     <input type="text" placeholder="Ciudad" formControlName="cityName" />
     <button type="submit">Consultar</button>
     <button type="button" (click)="removeWeatherList()" >Eliminar</button>
+    <button type="button" (click)="saveWeatherList()" >Save list</button>
+    <button type="button" (click)="getWeatherList()" >Restore saved list</button>
+
   </form>
   <section class="weather-card-container">
     <div *ngFor="let weather of weatherList" class="weather-card" >

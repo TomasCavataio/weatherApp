@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { WeatherService } from '../../services/weather.service';
+import { Store } from '@ngrx/store';
+import * as WeatherCardActions from '../../store/actions';
+import { selectWeatherList } from 'src/app/store/selector';
+import { WeatherCard } from 'src/app/models/weather.model';
 
 @Component({
   selector: 'app-weather',
@@ -8,10 +12,13 @@ import { WeatherService } from '../../services/weather.service';
   styleUrls: ['./weather.component.scss'],
 })
 export class WeatherComponent implements OnInit {
-  weatherList: Array<any> = [];
+  weatherList: Array<WeatherCard> = [];
   weatherForm: FormGroup;
 
-  constructor(private readonly weatherService: WeatherService) {
+  constructor(
+    private readonly weatherService: WeatherService,
+    private store: Store
+  ) {
     this.weatherForm = new FormGroup({
       cityName: new FormControl(''),
     });
@@ -68,9 +75,21 @@ export class WeatherComponent implements OnInit {
   }
 
   removeCard(id: number) {
-    this.weatherList = this.weatherList.filter(
-      (card) => card.id !== id
+    this.weatherList = this.weatherList.filter((card) => card.id !== id);
+  }
+
+  saveWeatherList() {
+    this.store.dispatch(
+      WeatherCardActions.storeWeatherList({ list: this.weatherList })
     );
+  }
+
+  getWeatherList() {
+    this.store
+      .select(selectWeatherList)
+      .subscribe((list: Array<WeatherCard>) => {
+        this.weatherList = list;
+      });
   }
 
   private cityDataExists(id: number): boolean {
