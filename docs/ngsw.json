@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1697181634961,
-  "index": "C:/Program Files/Git/weatherApp/index.html",
+  "timestamp": 1697189765650,
+  "index": "/weatherApp/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,12 +11,12 @@
         "ignoreVary": true
       },
       "urls": [
-        "C:/Program Files/Git/weatherApp/favicon.ico",
-        "C:/Program Files/Git/weatherApp/index.html",
-        "C:/Program Files/Git/weatherApp/main.c3917ed9de1d7950.js",
-        "C:/Program Files/Git/weatherApp/polyfills.019a1b69ab446621.js",
-        "C:/Program Files/Git/weatherApp/runtime.b0168126f84316f3.js",
-        "C:/Program Files/Git/weatherApp/styles.4d340b02f1aa40cd.css"
+        "/weatherApp/favicon.ico",
+        "/weatherApp/index.html",
+        "/weatherApp/main.5cc26d6420c55d19.js",
+        "/weatherApp/polyfills.019a1b69ab446621.js",
+        "/weatherApp/runtime.b0168126f84316f3.js",
+        "/weatherApp/styles.4d340b02f1aa40cd.css"
       ],
       "patterns": []
     },
@@ -28,10 +28,10 @@
         "ignoreVary": true
       },
       "urls": [
-        "C:/Program Files/Git/weatherApp/assets/clouds.webp",
-        "C:/Program Files/Git/weatherApp/assets/logos/logo192.png",
-        "C:/Program Files/Git/weatherApp/assets/logos/logo512.png",
-        "C:/Program Files/Git/weatherApp/assets/sun.jpg"
+        "/weatherApp/assets/clouds.webp",
+        "/weatherApp/assets/logos/logo192.png",
+        "/weatherApp/assets/logos/logo512.png",
+        "/weatherApp/assets/sun.jpg"
       ],
       "patterns": []
     }
@@ -52,16 +52,16 @@
     }
   ],
   "hashTable": {
-    "C:/Program Files/Git/weatherApp/assets/clouds.webp": "aa236c9c40a7d4a6c4b718a1cbc3a70a6147484c",
-    "C:/Program Files/Git/weatherApp/assets/logos/logo192.png": "d2bff735e9fff4b0acfd7fa6f4f0d2589268fb1f",
-    "C:/Program Files/Git/weatherApp/assets/logos/logo512.png": "aa02514253e1ce7aeff7751a149005e23e0bf2b5",
-    "C:/Program Files/Git/weatherApp/assets/sun.jpg": "1ede753f3d493e80036cc617826cde3cd3c5fa1d",
-    "C:/Program Files/Git/weatherApp/favicon.ico": "a166cf5c498ad6a840a1ca133e46e9a1ee36cae9",
-    "C:/Program Files/Git/weatherApp/index.html": "7d80cfd71092d0a14af0d74b43bb2549bb6cc3bb",
-    "C:/Program Files/Git/weatherApp/main.c3917ed9de1d7950.js": "0292a9a3fda2e4a213a21ff9db886f707226c4f7",
-    "C:/Program Files/Git/weatherApp/polyfills.019a1b69ab446621.js": "8af72949c49531b5812a3a952999741e070c8f7a",
-    "C:/Program Files/Git/weatherApp/runtime.b0168126f84316f3.js": "fb4fdda05ba0893382fb304d8d76054035214901",
-    "C:/Program Files/Git/weatherApp/styles.4d340b02f1aa40cd.css": "a2006beb355f51e3d32a8546623ad7ce1b5224ab"
+    "/weatherApp/assets/clouds.webp": "aa236c9c40a7d4a6c4b718a1cbc3a70a6147484c",
+    "/weatherApp/assets/logos/logo192.png": "d2bff735e9fff4b0acfd7fa6f4f0d2589268fb1f",
+    "/weatherApp/assets/logos/logo512.png": "aa02514253e1ce7aeff7751a149005e23e0bf2b5",
+    "/weatherApp/assets/sun.jpg": "1ede753f3d493e80036cc617826cde3cd3c5fa1d",
+    "/weatherApp/favicon.ico": "a166cf5c498ad6a840a1ca133e46e9a1ee36cae9",
+    "/weatherApp/index.html": "98c1ab85e063f275a17d5b9085494b502b0f252b",
+    "/weatherApp/main.5cc26d6420c55d19.js": "413dc310eb5d4a44ed73f7677bf5ab0508507421",
+    "/weatherApp/polyfills.019a1b69ab446621.js": "8af72949c49531b5812a3a952999741e070c8f7a",
+    "/weatherApp/runtime.b0168126f84316f3.js": "fb4fdda05ba0893382fb304d8d76054035214901",
+    "/weatherApp/styles.4d340b02f1aa40cd.css": "a2006beb355f51e3d32a8546623ad7ce1b5224ab"
   },
   "navigationUrls": [
     {
