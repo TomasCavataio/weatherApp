@@ -1,7 +1,7 @@
 {
     "name": "Weather App",
     "short_name": "Weather",
-    "start_url": "/",
+    "start_url": "https://tomascavataio.github.io/weatherApp/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#007BFF",
