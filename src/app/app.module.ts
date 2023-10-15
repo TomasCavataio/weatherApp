@@ -9,8 +9,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CityDetailComponent } from './components/city-detail/city-detail.component';
-import { CityListComponent } from './components/city-list/city-list.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { WeatherCardComponent } from './components/weather-card/weather-card.component';
@@ -22,9 +20,7 @@ import { weatherReducer } from './store/reducer';
   declarations: [
     AppComponent,
     WeatherComponent,
-    CityListComponent,
     WeatherCardComponent,
-    CityDetailComponent,
     HeaderComponent,
     FooterComponent,
   ],

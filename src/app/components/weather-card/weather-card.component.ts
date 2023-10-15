@@ -31,7 +31,4 @@ export class WeatherCardComponent {
     this.removeCard.emit(this.id);
   }
 
-  goToDetail() {
-    this.router.navigate(['/detail', this.id]);
-  }
 }

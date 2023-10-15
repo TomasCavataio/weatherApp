@@ -4,7 +4,7 @@
     <i [ngClass]="getWeatherIcon()"></i>
     <h2>{{ temperature }}°C</h2>
   </div>
-  <div class="weather-card-body" (click)="goToDetail()">
+  <div class="weather-card-body">
     <h3>{{ cityName }}</h3>
     <p>Sky: {{ weatherDescription }}</p>
     <p>Humidity: {{ humidity }}%</p>
