@@ -10,7 +10,6 @@ import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
 import { WeatherCardComponent } from './components/weather-card/weather-card.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { WeatherService } from './services/weather.service';
@@ -21,7 +20,6 @@ import { weatherReducer } from './store/reducer';
     AppComponent,
     WeatherComponent,
     WeatherCardComponent,
-    HeaderComponent,
     FooterComponent,
   ],
   imports: [

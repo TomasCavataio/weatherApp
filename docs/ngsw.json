@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1697294822142,
+  "timestamp": 1697387784461,
   "index": "/weatherApp/index.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/weatherApp/favicon.ico",
         "/weatherApp/index.html",
-        "/weatherApp/main.c68a10a0b0524f28.js",
-        "/weatherApp/polyfills.019a1b69ab446621.js",
+        "/weatherApp/main.9fa5066a29e451f3.js",
+        "/weatherApp/polyfills.fd9495b111174e03.js",
         "/weatherApp/runtime.b0168126f84316f3.js",
-        "/weatherApp/styles.4d340b02f1aa40cd.css"
+        "/weatherApp/styles.82a7268fa81e36a6.css"
       ],
       "patterns": []
     },
@@ -28,6 +28,7 @@
         "ignoreVary": true
       },
       "urls": [
+        "/weatherApp/assets/cloud.jpg",
         "/weatherApp/assets/clouds.webp",
         "/weatherApp/assets/logos/logo192.png",
         "/weatherApp/assets/logos/logo512.png",
@@ -52,16 +53,17 @@
     }
   ],
   "hashTable": {
+    "/weatherApp/assets/cloud.jpg": "5686383282d168852f14720dab2e9443ea693fe1",
     "/weatherApp/assets/clouds.webp": "aa236c9c40a7d4a6c4b718a1cbc3a70a6147484c",
     "/weatherApp/assets/logos/logo192.png": "d2bff735e9fff4b0acfd7fa6f4f0d2589268fb1f",
     "/weatherApp/assets/logos/logo512.png": "aa02514253e1ce7aeff7751a149005e23e0bf2b5",
     "/weatherApp/assets/sun.jpg": "1ede753f3d493e80036cc617826cde3cd3c5fa1d",
     "/weatherApp/favicon.ico": "a166cf5c498ad6a840a1ca133e46e9a1ee36cae9",
-    "/weatherApp/index.html": "98074f7abd5c3170ac7b6e7f91b7a0c34c68e9fa",
-    "/weatherApp/main.c68a10a0b0524f28.js": "0f7ee22478e22b493bf2de36228d1c50aaf71383",
-    "/weatherApp/polyfills.019a1b69ab446621.js": "8af72949c49531b5812a3a952999741e070c8f7a",
+    "/weatherApp/index.html": "9250436af31b1318e1648d597ad91b302361028f",
+    "/weatherApp/main.9fa5066a29e451f3.js": "32a91411d80cba99426e5b3c86b2463615a4b96e",
+    "/weatherApp/polyfills.fd9495b111174e03.js": "4682e44641c88394defeeb9f284e8910c434a1f0",
     "/weatherApp/runtime.b0168126f84316f3.js": "fb4fdda05ba0893382fb304d8d76054035214901",
-    "/weatherApp/styles.4d340b02f1aa40cd.css": "a2006beb355f51e3d32a8546623ad7ce1b5224ab"
+    "/weatherApp/styles.82a7268fa81e36a6.css": "a0839111ea9379ed5f442acee701589005936a06"
   },
   "navigationUrls": [
     {

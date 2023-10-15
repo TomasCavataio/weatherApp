@@ -1,16 +1,20 @@
 <div class="weather-container">
-  <h1>Weather App</h1>
+  <header>
+    <h1>Weather App</h1>
+    <div class="header-buttons">
+      <button type="button" (click)="saveWeatherList()">
+        Save List <i class="fa fa-solid fa-save"></i>
+      </button>
+      <button type="button" (click)="getWeatherList()">
+        Your list <i class="fa fa-solid fa-star"></i>
+      </button>
+    </div>
+  </header>
   <form [formGroup]="weatherForm" (ngSubmit)="getCoordinatesByCity()">
     <input type="text" placeholder="City name" formControlName="cityName" />
     <button type="submit">Search <i class="fa fa-solid fa-search"></i></button>
     <button type="button" (click)="removeWeatherList()">
       Clear <i class="fa fa-solid fa-trash"></i>
-    </button>
-    <button type="button" (click)="saveWeatherList()">
-      Save List <i class="fa fa-solid fa-save"></i>
-    </button>
-    <button type="button" (click)="getWeatherList()">
-      Your list <i class="fa fa-solid fa-star"></i>
     </button>
   </form>
   <section class="weather-card-container">
