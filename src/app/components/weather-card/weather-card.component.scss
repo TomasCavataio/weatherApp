@@ -35,8 +35,21 @@
   width: 83.5vw;
   height: 35vh;
   font-size: x-large;
-  background-image: url("../../../assets/cloud.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.cloudy {
+  background-image: url("../../../assets/cloud.jpg");
+}
+.sunny {
+  background-image: url("../../../assets/clouds.webp");
+}
+
+@media (max-width: 768px) {
+  .main-card {
+    height: 40vh;
+    max-width: 300px;
+    width: 100%;
+  }
 }

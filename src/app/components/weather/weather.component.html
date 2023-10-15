@@ -20,7 +20,7 @@
   <section class="weather-card-container">
     <div
       *ngFor="let weather of weatherList; let i = index"
-      [ngClass]="{ 'weather-card': i !== 0 }"
+      [ngClass]="{ 'weather-card': i !== 0, 'main-card': i === 0 }"
     >
       <app-weather-card
         [id]="weather.id"

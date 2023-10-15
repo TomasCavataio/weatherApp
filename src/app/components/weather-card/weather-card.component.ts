@@ -1,10 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-weather-card',
   templateUrl: './weather-card.component.html',
-  styleUrls: ['./weather-card.component.scss']
+  styleUrls: ['./weather-card.component.scss'],
 })
 export class WeatherCardComponent {
   @Input() id: number | undefined;
@@ -19,16 +18,18 @@ export class WeatherCardComponent {
 
   @Output() removeCard = new EventEmitter<number>();
 
-  constructor(private readonly router: Router) {}
+  isCloudy: boolean | undefined;
 
   getWeatherIcon() {
-    return this.weatherDescription?.includes('clouds')
-      ? 'fa fa-solid fa-cloud'
-      : 'fa fa-sun-o';
+    if (this.weatherDescription?.includes('clouds')) {
+      this.isCloudy = true;
+      return 'fa fa-solid fa-cloud';
+    }
+    this.isCloudy = false;
+    return 'fa fa-sun-o';
   }
 
   removeWeather() {
     this.removeCard.emit(this.id);
   }
-
 }

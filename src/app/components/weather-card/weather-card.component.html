@@ -1,4 +1,7 @@
-<div class="weather-card" [ngClass]="{ 'main-card': isMainCard }">
+<div
+  class="weather-card"
+  [ngClass]="{ 'main-card': isMainCard, 'cloudy': isCloudy, 'sunny': !isCloudy }"
+>
   <i (click)="removeWeather()" class="fa fa-times close-icon"></i>
   <div class="weather-card-header">
     <i [ngClass]="getWeatherIcon()"></i>
