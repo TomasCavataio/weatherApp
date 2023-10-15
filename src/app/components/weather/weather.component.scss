@@ -41,7 +41,10 @@ header {
   justify-content: center;
   width: 100%;
   margin-left: auto;
-  h1,
+  img {
+    margin: 0;
+    width: 5em;
+  }
   .header-buttons {
     display: flex;
     margin-left: auto;
@@ -65,5 +68,8 @@ header {
 @media (max-width: 768px) {
   .weather-card, .main-card {
     width: 100%;
+  }
+  header {
+    margin-bottom: 2em;
   }
 }

@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1697397618060,
+  "timestamp": 1697402052576,
   "index": "/weatherApp/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/weatherApp/favicon.ico",
         "/weatherApp/index.html",
-        "/weatherApp/main.6d69f1c0a1ea0399.js",
+        "/weatherApp/main.3bedd48be244c082.js",
         "/weatherApp/polyfills.fd9495b111174e03.js",
         "/weatherApp/runtime.b0168126f84316f3.js",
         "/weatherApp/styles.82a7268fa81e36a6.css"
@@ -31,8 +31,7 @@
         "/weatherApp/assets/cloud.jpg",
         "/weatherApp/assets/clouds.webp",
         "/weatherApp/assets/logos/logo192.png",
-        "/weatherApp/assets/logos/logo512.png",
-        "/weatherApp/assets/sun.jpg"
+        "/weatherApp/assets/logos/logo512.png"
       ],
       "patterns": []
     }
@@ -57,10 +56,9 @@
     "/weatherApp/assets/clouds.webp": "aa236c9c40a7d4a6c4b718a1cbc3a70a6147484c",
     "/weatherApp/assets/logos/logo192.png": "d2bff735e9fff4b0acfd7fa6f4f0d2589268fb1f",
     "/weatherApp/assets/logos/logo512.png": "aa02514253e1ce7aeff7751a149005e23e0bf2b5",
-    "/weatherApp/assets/sun.jpg": "1ede753f3d493e80036cc617826cde3cd3c5fa1d",
     "/weatherApp/favicon.ico": "a166cf5c498ad6a840a1ca133e46e9a1ee36cae9",
-    "/weatherApp/index.html": "1b5c12fbf6f674f67eeb5cf00f26af8b7fa01558",
-    "/weatherApp/main.6d69f1c0a1ea0399.js": "7a2cc13088fb844860441aeead38d3b9df357b29",
+    "/weatherApp/index.html": "b4debed6c8c0c777f9e4688c8961107f69d4880b",
+    "/weatherApp/main.3bedd48be244c082.js": "fc6d0bdde51baa85a5a8e5629fee7f97855efb59",
     "/weatherApp/polyfills.fd9495b111174e03.js": "4682e44641c88394defeeb9f284e8910c434a1f0",
     "/weatherApp/runtime.b0168126f84316f3.js": "fb4fdda05ba0893382fb304d8d76054035214901",
     "/weatherApp/styles.82a7268fa81e36a6.css": "a0839111ea9379ed5f442acee701589005936a06"
