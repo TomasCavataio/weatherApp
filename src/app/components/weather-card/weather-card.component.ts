@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class WeatherCardComponent {
   @Input() id: number | undefined;
+  @Input() isMainCard: boolean | undefined;
   @Input() cityName: string | undefined;
   @Input() state: string | undefined;
   @Input() temperature: number | undefined;

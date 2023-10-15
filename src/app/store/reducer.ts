@@ -13,13 +13,10 @@ export const initialState: AppState = {
 export const weatherReducer = createReducer(
   initialState,
   on(WeatherCardActions.storeWeatherList, (state, { list }) => {
-    console.log('State before update:', state);
-    const newState = {
+    return {
       ...state,
       weatherList: list,
     };
-    console.log('State after update:', newState);
-    return newState;
   }),
   on(WeatherCardActions.removeWeatherCard, (state, { cardId }) => ({
     ...state,

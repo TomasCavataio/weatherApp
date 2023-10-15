@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { WeatherService } from '../../services/weather.service';
 import { Store } from '@ngrx/store';
 import * as WeatherCardActions from '../../store/actions';
 import { selectWeatherList } from 'src/app/store/selector';
 import { WeatherCard } from 'src/app/models/weather.model';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { AppState } from 'src/app/store/reducer';
 
 @Component({
   selector: 'app-weather',
@@ -17,6 +19,7 @@ export class WeatherComponent implements OnInit {
 
   constructor(
     private readonly weatherService: WeatherService,
+    private readonly localStorageService: LocalStorageService,
     private store: Store
   ) {
     this.weatherForm = new FormGroup({
@@ -36,6 +39,12 @@ export class WeatherComponent implements OnInit {
         (error) => {
           console.error('Error getting location:', error);
         }
+      );
+    }
+    const savedState = this.localStorageService.getState();
+    if (savedState) {
+      this.store.dispatch(
+        WeatherCardActions.storeWeatherList({ list: savedState })
       );
     }
   }
@@ -82,6 +91,7 @@ export class WeatherComponent implements OnInit {
     this.store.dispatch(
       WeatherCardActions.storeWeatherList({ list: this.weatherList })
     );
+    this.localStorageService.setState(this.weatherList);
   }
 
   getWeatherList() {
@@ -90,6 +100,10 @@ export class WeatherComponent implements OnInit {
       .subscribe((list: Array<WeatherCard>) => {
         this.weatherList = list;
       });
+  }
+
+  isMainCard(i: number) {
+    return i === 0;
   }
 
   private cityDataExists(id: number): boolean {

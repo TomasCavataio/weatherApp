@@ -1,6 +1,6 @@
 .weather-card {
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 14px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   margin: 10px;
   padding: 10px;
@@ -8,7 +8,7 @@
   background-color: #122141;
   color: white;
   position: relative;
-
+  width: 100%;
   &-header {
     display: flex;
     justify-content: space-evenly;
@@ -28,4 +28,11 @@
   &-body p {
     margin: 5px 0;
   }
+}
+
+.main-card {
+  max-width: none;
+  width: 83.5vw;
+  height: 35vh;
+  font-size: x-large;
 }

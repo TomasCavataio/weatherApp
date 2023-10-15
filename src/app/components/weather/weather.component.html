@@ -1,18 +1,27 @@
 <div class="weather-container">
-  <h1>Consulta el Tiempo</h1>
+  <h1>Weather App</h1>
   <form [formGroup]="weatherForm" (ngSubmit)="getCoordinatesByCity()">
-    <input type="text" placeholder="Ciudad" formControlName="cityName" />
-    <button type="submit">Consultar</button>
-    <button type="button" (click)="removeWeatherList()" >Eliminar</button>
-    <button type="button" (click)="saveWeatherList()" >Save list</button>
-    <button type="button" (click)="getWeatherList()" >Restore saved list</button>
-
+    <input type="text" placeholder="City name" formControlName="cityName" />
+    <button type="submit">Search <i class="fa fa-solid fa-search"></i></button>
+    <button type="button" (click)="removeWeatherList()">
+      Clear <i class="fa fa-solid fa-trash"></i>
+    </button>
+    <button type="button" (click)="saveWeatherList()">
+      Save List <i class="fa fa-solid fa-save"></i>
+    </button>
+    <button type="button" (click)="getWeatherList()">
+      Your list <i class="fa fa-solid fa-star"></i>
+    </button>
   </form>
   <section class="weather-card-container">
-    <div *ngFor="let weather of weatherList" class="weather-card" >
+    <div
+      *ngFor="let weather of weatherList; let i = index"
+      [ngClass]="{ 'weather-card': i !== 0 }"
+    >
       <app-weather-card
         [id]="weather.id"
-        [cityName]="weather.cityName ? weather.cityName : weather.name "
+        [isMainCard]="isMainCard(i)"
+        [cityName]="weather.cityName ? weather.cityName : weather.name"
         [temperature]="weather.main.temp"
         [weatherDescription]="weather.weather[0].description"
         [humidity]="weather.main.humidity"

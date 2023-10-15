@@ -1,4 +1,4 @@
-<div class="weather-card">
+<div class="weather-card" [ngClass]="{ 'main-card': isMainCard }">
   <i (click)="removeWeather()" class="fa fa-times close-icon"></i>
   <div class="weather-card-header">
     <i [ngClass]="getWeatherIcon()"></i>
@@ -6,8 +6,8 @@
   </div>
   <div class="weather-card-body" (click)="goToDetail()">
     <h3>{{ cityName }}</h3>
-    <p>Estado del cielo: {{ weatherDescription }}</p>
-    <p>Humedad: {{ humidity }}%</p>
-    <p>Viento: {{ windSpeed }} m/s</p>
+    <p>Sky: {{ weatherDescription }}</p>
+    <p>Humidity: {{ humidity }}%</p>
+    <p>Wind: {{ windSpeed }} m/s</p>
   </div>
 </div>
