@@ -66,10 +66,17 @@ header {
 }
 
 @media (max-width: 768px) {
-  .weather-card, .main-card {
+  .weather-card,
+  .main-card {
     width: 100%;
   }
   header {
     margin-bottom: 2em;
+  }
+}
+
+@media(max-width: 1919px) {
+  .weather-card-container {
+    gap: 6%;
   }
 }
