@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:coverage": "ng test --code-coverage",
-    "update-docs": "ng build --output-path docs --base-href /weatherApp/"
+    "update-docs": "ng build --output-path docs --base-href /weatherApp/",
+    "e2e:components": "cypress run --component",
+    "e2e": "cypress run"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +35,7 @@
     "@angular/cli": "~14.2.1",
     "@angular/compiler-cli": "^14.0.0",
     "@types/jasmine": "~4.0.0",
+    "cypress": "^12.2.0",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
